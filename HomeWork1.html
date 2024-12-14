@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Hover</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            position: relative;
+            display: block;
+        }
+        .small {
+            
+            width: 240px;
+            position: absolute;
+            margin-left: 50px;
+            margin-top: 50px;
+            
+        }
+        .small img {
+            width: 200px;
+            display: block;
+            height: 600;
+            margin-bottom: 100px;
+            
+            
+            
+        }
+        .big {
+            width: 500px;
+           
+            position: absolute;
+            /* border: 5px solid black; */
+            top: 0;
+            left: 500px;
+            margin-top: 100px;
+            
+            
+        }
+        .big img {
+           width: 150%;
+            display: none;
+        }
+
+        .small div img:hover {
+            cursor: pointer;
+            width: 180px;
+            opacity: 0.5;
+            
+        }
+        .small .smallferrari:hover ~ .big .ferrari{
+             display: block;
+        }
+        .small .smalllamborghini:hover ~ .big #lamborghini{
+             display: block;
+        }
+        .small .smallporsche:hover ~ .big #porsche {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="small">
+        <div class="smallferrari"><img src="ferrari.png" alt="Ferrari"></div>
+        <div class="smalllamborghini"><img src="lamborghini.png" alt="Lamborghini"></div>
+        <div class="smallporsche"><img src="porsche.png" alt="Porsche"></div>
+        
+        <div class="big">
+            <img  class="ferrari" src="ferrari.png" alt="Ferrari">
+            <img  id="lamborghini" src="lamborghini.png" alt="Lamborghini">
+            <img id="porsche" src="porsche.png" alt="Porsche">
+        </div>
+    </div>
+   </div>
+</body>
+</html>
